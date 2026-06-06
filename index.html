@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="webgl-canvas"></canvas>
+
+    <div id="ui-layer">
+      <div id="map-container"></div>
+
+    <div id="monitor-ui" style="display: none;">
+      <div class="system-text">ERROR: SYSTEM LOCKED.</div>
+      <div class="system-text sub">REQUIREMENT:</div>
+      
+      <svg class="dogeza-icon" viewBox="0 0 100 60" width="120" height="80">
+        <line x1="5" y1="56" x2="95" y2="56" stroke="#00ffcc" stroke-width="2" />
+        
+        <circle cx="25" cy="48" r="6" fill="#00ffcc"/>
+        
+        <path d="M 65 30 Q 50 25 32 40" fill="none" stroke="#00ffcc" stroke-width="7" stroke-linecap="round"/>
+        
+        <path d="M 65 30 L 65 52 L 85 52" fill="none" stroke="#00ffcc" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        
+        <path d="M 35 38 L 22 52 L 12 52" fill="none" stroke="#00ffcc" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      
+      <div class="password-box">[ &nbsp; ] [ &nbsp; ] [ &nbsp; ]</div>
+      <button id="send-button">SEND</button>
+      <div id="monitor-message"></div> </div>
+
+    <div id="clear-ui" style="display: none;">
+      <h1>CLEAR!</h1>
+      <p>『MarkS』のシステムを解除しました。</p>
+      <p id="result-stats"></p>
+      <button id="share-button">X (Twitter) でシェア</button>
+    </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
